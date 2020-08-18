@@ -28,18 +28,20 @@ export default {
         return{
             test: '',
             name: '',
-            gastbuch: []
+            gastbuch: [],
+            index: 0,
         }
     },
    mounted() {
         this.gastbuch = JSON.parse(localStorage.getItem('STORAGE_KEY'))
     },
-    watch: {
-        name(newName) {
-            localStorage.name = newName;
-        }
-    },
+
     methods: {
+        deleteGasteintrag: function() {
+            this.gastbuch.splice(0,1);
+            localStorage.setItem('STORAGE_KEY', JSON.stringify(this.gastbuch));
+            this.gastbuch = JSON.parse(localStorage.getItem('STORAGE_KEY'))
+        }
         
     }
 }

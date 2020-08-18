@@ -19,11 +19,9 @@
                 <p class="pgast">{{gast.name}}</p>
                 {{gast.text}}
                 
-                </ul>
-                              
-                
+                </ul>        
     	    </div>
-
+        
             
         </div>
     </div>
@@ -38,7 +36,7 @@ export default {
             
             fname: ' ',
             guesttext: '',
-            id: 0,
+            id: 1,
 
             stringid: '',
             stringname: '',
@@ -48,6 +46,7 @@ export default {
 
             gastbuch: [
               {id: 1, name: 'Leo', text: 'Der erste Eintrag'},
+               
            
             ],
             
@@ -55,14 +54,15 @@ export default {
     },
     methods: {
         addGuestPost: function () {
-            this.id++;
+            
             this.gastbuch.id = this.gastbuch.id + 1;
-            this.gastbuch.push ({id: this.id, name: this.fname, text: this.guesttext});   
+            this.gastbuch.push ({id: this.id, name: this.fname, text: this.guesttext});
             localStorage.setItem('STORAGE_KEY', JSON.stringify(this.gastbuch));
         }
     },
     
     mounted() {
+        if(localStorage.getItem('STORAGE_KEY')!= null)
         this.gastbuch = JSON.parse(localStorage.getItem('STORAGE_KEY'))
     }
     
