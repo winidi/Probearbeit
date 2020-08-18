@@ -3,7 +3,7 @@
         <div class="text">
             <br>
         <h1>Kontaktdaten</h1>
-        <p>
+        <p class="pkontakt">
             <strong> LeosRestaurant </strong>
             <br>
             MusterStraße 23
@@ -13,8 +13,8 @@
             Deutschland
         </p>
 
-        <p>Email: <a href="mailto:dirkwiniecki@web.de">dirkwiniecki@web.de</a></p>
-        <p>Internet: <a href="https://github.com/winidi/probearbeit">https://github.com/winidi/probearbeit</a></p>
+        <p class="pkontakt">Email: <a href="mailto:dirkwiniecki@web.de">dirkwiniecki@web.de</a></p>
+        <p class="pkontakt">Internet: <a href="https://github.com/winidi/probearbeit">https://github.com/winidi/probearbeit</a></p>
         </div>
     </div>
 </template>
@@ -31,9 +31,7 @@
         #B5D5D8);
 }
 
-
-
-p {
+.pkontakt {
     text-align: left;
     font-size: 1.2em;
 }

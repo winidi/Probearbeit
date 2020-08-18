@@ -1,11 +1,11 @@
 <template>
     
     <div class="content">
-        <div class="cincont">
+        
              <br>
     <h1> Seit 1889 mit Köstlichkeiten für Sie da</h1>
     
-    <h2>1989 Gründete Leonardo Da Vinci LeosRestaurant</h2>
+    <h2>1889 Gründete Leonardo Da Vinci LeosRestaurant</h2>
 
     <img src="~assets/restaurant.jpg" alt="">
  
@@ -17,7 +17,7 @@
 
     <img src="~assets/leoderzweite.jpg" alt="">
 
-        </div>
+        
     </div>
 
 
@@ -29,7 +29,7 @@
 
 
 .content {
-    margin: auto;
+    text-align: center;
     width: 100%;
     background-image: linear-gradient(
         #f8bcb8,	
@@ -38,9 +38,6 @@
 }
 
 
-.cincont{
-    text-align: center;
-}
 
 h1 {
     text-align: center;
