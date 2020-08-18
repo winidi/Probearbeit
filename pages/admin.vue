@@ -9,11 +9,13 @@
                 <p class="pgast">{{gast.name}}</p>
                 {{gast.text}}
 
+                <button class="adminbutton" @click="deleteGasteintrag">Eintrag löschen</button>
                 </ul>
                               
                 
-    	    </div>
+    	</div> 
 
+       
         
 
      </div>
@@ -24,14 +26,32 @@
 export default {
     data(){
         return{
-            test: ''
+            test: '',
+            name: '',
+            gastbuch: []
         }
+    },
+   mounted() {
+        this.gastbuch = JSON.parse(localStorage.getItem('STORAGE_KEY'))
+    },
+    watch: {
+        name(newName) {
+            localStorage.name = newName;
+        }
+    },
+    methods: {
+        
     }
 }
 </script>
 
 
 <style >
+.adminbutton {
+    
+    margin-left: 2em;
+}
+
 .content{  
     margin: 0;
     width: 100%;

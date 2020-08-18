@@ -40,25 +40,32 @@ export default {
             guesttext: '',
             id: 0,
 
+            stringid: '',
+            stringname: '',
+            stringtext: '',
+
+
+
             gastbuch: [
               {id: 1, name: 'Leo', text: 'Der erste Eintrag'},
            
-            ]
+            ],
+            
         }
     },
     methods: {
         addGuestPost: function () {
             this.id++;
-            this.gastbuch.id = this.gastbuch.id + 1
-            this.gastbuch.push ({id: this.id, name: this.fname, text: this.guesttext});
-            
-            
-            
+            this.gastbuch.id = this.gastbuch.id + 1;
+            this.gastbuch.push ({id: this.id, name: this.fname, text: this.guesttext});   
+            localStorage.setItem('STORAGE_KEY', JSON.stringify(this.gastbuch));
         }
-
-       
+    },
     
+    mounted() {
+        this.gastbuch = JSON.parse(localStorage.getItem('STORAGE_KEY'))
     }
+    
     
 }
 </script>
