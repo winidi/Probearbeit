@@ -37,12 +37,21 @@ export default {
             fname: ' ',
             guesttext: '',
             id: 1,
+<<<<<<< HEAD
+=======
+
+>>>>>>> d07ca5799b0487bb587e398aeb70febd455610c0
             stringid: '',
             stringname: '',
             stringtext: '',
             gastbuch: [
               {id: 1, name: 'Leo', text: 'Der erste Eintrag'},
+<<<<<<< HEAD
                       
+=======
+               
+           
+>>>>>>> d07ca5799b0487bb587e398aeb70febd455610c0
             ],
             
         }
