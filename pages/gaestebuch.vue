@@ -62,7 +62,7 @@ export default {
     },
     
     mounted() {
-        if(localStorage.getItem('STORAGE_KEY')!= null)
+        //if(localStorage.getItem('STORAGE_KEY')!= null)
         this.gastbuch = JSON.parse(localStorage.getItem('STORAGE_KEY'))
     }
     

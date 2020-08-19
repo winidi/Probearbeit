@@ -14,6 +14,9 @@
         <nuxt-link class="links" to="/kontakt">
         Kontakt
         </nuxt-link>
+        <nuxt-link class="links" to="/speisekarte">
+        Speisekarte
+        </nuxt-link> 
         <nuxt-link class="links" id="gaestebuchlink" to="/gaestebuch">
         Gästebuch
         </nuxt-link>
