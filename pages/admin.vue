@@ -4,15 +4,20 @@
          <h1>Admin Bereich</h1>
 
           <div class="eintraege">
-                <ul v-for="gast in gastbuch" :key="gast.id">
+                <ul v-for="(gast, index) in gastbuch" :key="index">
                     <hr>
-                <p class="pgast">{{gast.name}}</p>
-                {{gast.text}}
-
-                <button class="adminbutton" @click="deleteGasteintrag">Eintrag löschen</button>
+                <p class="pgast">
+                <label>name:<br></label>
+                <input class="center-block" type="text" v-model="gast.name">
+                </p>
+                <label>text:<br></label>
+                <input class="center-block" type="text" v-model="gast.text">
+                    
+                    
+                <button class="edit" v-on:click="editEintrag(index)">edit</button>
+                <button class="adminbutton" v-on:click="deleteGasteintrag(index, gast.id)">Eintrag löschen</button>
                 </ul>
-                              
-                
+
     	</div> 
 
        
@@ -28,18 +33,28 @@ export default {
         return{
             test: '',
             name: '',
-            gastbuch: []
+            gastbuch: [],
+            
         }
     },
    mounted() {
         this.gastbuch = JSON.parse(localStorage.getItem('STORAGE_KEY'))
     },
-    watch: {
-        name(newName) {
-            localStorage.name = newName;
-        }
-    },
     methods: {
+        deleteGasteintrag: function(index) {
+            //alert(index)
+            this.gastbuch.splice(index, 1,);
+            localStorage.setItem('STORAGE_KEY', JSON.stringify(this.gastbuch));
+            this.gastbuch = JSON.parse(localStorage.getItem('STORAGE_KEY'))
+        },
+
+        editEintrag: function(index){
+            this.gastbuch.splice(index , 1, this.gastbuch[index])
+            localStorage.setItem('STORAGE_KEY', JSON.stringify(this.gastbuch));
+            this.gastbuch = JSON.parse(localStorage.getItem('STORAGE_KEY'))
+        }
+
+        
         
     }
 }
@@ -51,7 +66,6 @@ export default {
     
     margin-left: 2em;
 }
-
 .content{  
     margin: 0;
     width: 100%;

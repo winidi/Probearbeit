@@ -4,11 +4,18 @@
         <nuxt-link class="footerlinks" to="/admin">
         Admin
         </nuxt-link> 
+        <nuxt-link class="footerlinks" id="impressum" to="/kontakt">
+        Impressum
+        </nuxt-link> 
          </div>
     </footer>
 </template>
 
 <style>
+
+#impressum {
+ float: left;  
+}
 
 .footercont {
   background-color: black;

@@ -21,6 +21,10 @@
 
 <style>
 
+.h1 {
+    font-family: 'Quicksand', 'Source Sans Pro', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+}
+
 .content{  
     margin: 0;
     width: 100%;

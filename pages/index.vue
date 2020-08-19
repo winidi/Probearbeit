@@ -15,6 +15,11 @@ export default {}
 </script>
 
 <style>
+
+.h1 {
+  font-family: 'Quicksand', 'Source Sans Pro', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+}
+
 .container {
   margin: 0 auto;
   min-height: 100vh;
